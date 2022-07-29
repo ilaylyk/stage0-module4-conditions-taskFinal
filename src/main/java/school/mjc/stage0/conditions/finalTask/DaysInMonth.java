@@ -5,29 +5,28 @@ public class DaysInMonth {
         boolean isLeapYear =
                 (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
         switch (month) {
-            case 2:
-                if (isLeapYear) {
-                    System.out.print(month + " " + year);
-                } else {
-                    System.out.print(month + " " + year);
-                }
-                break;
             case 1:
+                System.out.println("31");
+            case 2:
+                if (isLeapYear) System.out.println("29");
+                else System.out.println("28");
+                break;
             case 3:
             case 5:
             case 7:
             case 8:
             case 10:
             case 12:
-                System.out.print(month + " " + year);
+                System.out.println("31");
                 break;
             case 4:
-            case 9:
             case 6:
+            case 9:
             case 11:
-                System.out.print(month + " " + year);
+                System.out.println("30");
                 break;
-
+            default:
+                System.out.println("invalid date");
         }
     }
 }
